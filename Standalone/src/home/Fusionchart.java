@@ -16,11 +16,9 @@ public class Fusionchart {
 
 	public static void main(String[] args) throws IOException, JSONException {
 		String path = "D:/Downloads/Untitled_Message/tr05.lst";
-		File f = new File(path);
-		String fname = f.getName();
+		String fname = new File(path).getName();
 		System.out.println(path.replace(fname, "tr06.lst"));
-		FileReader file = new FileReader(path);
-		BufferedReader br = new BufferedReader(file);
+		BufferedReader br = new BufferedReader( new FileReader(path));
 		Pattern p = Pattern.compile("ENTRC\\s\\w\\w\\w\\w");
 		FileWriter dawg = new FileWriter("D:/Miscellaneous/Java/Sup/WebContent/flare.json");
 		JSONArray ja = search(p, br);
