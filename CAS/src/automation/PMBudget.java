@@ -201,6 +201,7 @@ public class PMBudget implements ActionListener {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void excel2() throws Exception {
 		FileInputStream file = new FileInputStream(new File(path));
 		Workbook wb = null;

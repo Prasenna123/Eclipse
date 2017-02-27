@@ -34,6 +34,7 @@ public class PMO implements ActionListener {
 		x.gui();
 	}
 
+	@SuppressWarnings("deprecation")
 	public void mapping(String newf, String oldf) throws IOException {
 		Workbook wb1 = null;
 		Workbook wb2 = null;
